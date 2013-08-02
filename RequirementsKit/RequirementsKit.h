@@ -12,4 +12,6 @@
 
 + (RequirementsKit *)sharedInstance;
 
+@property (nonatomic) NSString *apiKey;
+
 @end

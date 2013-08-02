@@ -7,6 +7,7 @@
 //
 
 #import "RequirementsKitTests.h"
+#import "RequirementsKit.h"
 
 @implementation RequirementsKitTests
 
@@ -24,9 +25,19 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSharedInstanceShouldReturn
 {
-    STFail(@"Unit tests are not implemented yet in RequirementsKitTests");
+    RequirementsKit *kit = [RequirementsKit sharedInstance];
+    STAssertEquals([RequirementsKit class], [kit class], @"sharedInstance should return an instance of RequirementsKit");
+}
+
+- (void)testSingletonMethod
+{
+    RequirementsKit *kit1 = [RequirementsKit sharedInstance];
+    RequirementsKit *kit2 = [RequirementsKit sharedInstance];
+    [kit1 setApiKey:@"test123"];
+    STAssertEqualObjects([kit1 apiKey], [kit2 apiKey], @"sharedInstance should act like a singleton");
+    STAssertEqualObjects([kit2 apiKey], @"test123", @"a change to sharedInstance should be global");
 }
 
 @end
