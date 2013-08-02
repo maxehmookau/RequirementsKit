@@ -12,6 +12,18 @@
 
 static RequirementsKit *sharedInstance;
 
+#pragma mark - Create a URL
+
++ (NSURL *)baseURI
+{
+    return [NSURL URLWithString:@"https://require-production.herokuapp.com/api/v1/"];
+}
+
+- (NSString *)tokenParam
+{
+    return [NSString stringWithFormat:@"?token=%@", [self apiKey]];
+}
+
 #pragma mark - Singleton Method
 
 + (RequirementsKit *)sharedInstance

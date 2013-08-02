@@ -11,6 +11,8 @@
 @interface RequirementsKit : NSObject
 
 + (RequirementsKit *)sharedInstance;
++ (NSURL *)baseURI;
+- (NSString *)tokenParam;
 
 @property (nonatomic) NSString *apiKey;
 

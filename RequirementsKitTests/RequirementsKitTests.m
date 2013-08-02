@@ -40,4 +40,17 @@
     STAssertEqualObjects([kit2 apiKey], @"test123", @"a change to sharedInstance should be global");
 }
 
+- (void)testBaseURI
+{
+    NSURL *uri = [RequirementsKit baseURI];
+    STAssertEqualObjects([uri absoluteString], @"https://require-production.herokuapp.com/api/v1/", @"The Base URI should be correct");
+}
+
+- (void)testTokenParam
+{
+    RequirementsKit *kit = [RequirementsKit sharedInstance];
+    [kit setApiKey:@"test123"];
+    STAssertEqualObjects([kit tokenParam], @"?token=test123", @"should output the token param to append to the end of the endpoint");
+}
+
 @end
