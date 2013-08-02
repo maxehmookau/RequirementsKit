@@ -10,4 +10,6 @@
 
 @interface RequirementsKit : NSObject
 
++ (RequirementsKit *)sharedInstance;
+
 @end
