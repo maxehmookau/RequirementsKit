@@ -16,6 +16,7 @@
 		4D3F019217AC312000A49318 /* libRequirementsKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3F017917AC312000A49318 /* libRequirementsKit.a */; };
 		4D3F019817AC312000A49318 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D3F019617AC312000A49318 /* InfoPlist.strings */; };
 		4D3F019B17AC312000A49318 /* RequirementsKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F019A17AC312000A49318 /* RequirementsKitTests.m */; };
+		4D3F01A617AD4D9300A49318 /* RKProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F01A517AD4D9300A49318 /* RKProject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		4D3F019717AC312000A49318 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D3F019917AC312000A49318 /* RequirementsKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequirementsKitTests.h; sourceTree = "<group>"; };
 		4D3F019A17AC312000A49318 /* RequirementsKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequirementsKitTests.m; sourceTree = "<group>"; };
+		4D3F01A417AD4D9300A49318 /* RKProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKProject.h; sourceTree = "<group>"; };
+		4D3F01A517AD4D9300A49318 /* RKProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKProject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 			children = (
 				4D3F018117AC312000A49318 /* RequirementsKit.h */,
 				4D3F018317AC312000A49318 /* RequirementsKit.m */,
+				4D3F01A417AD4D9300A49318 /* RKProject.h */,
+				4D3F01A517AD4D9300A49318 /* RKProject.m */,
 				4D3F017F17AC312000A49318 /* Supporting Files */,
 			);
 			path = RequirementsKit;
@@ -244,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3F018417AC312000A49318 /* RequirementsKit.m in Sources */,
+				4D3F01A617AD4D9300A49318 /* RKProject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +409,7 @@
 				4D3F01A017AC312000A49318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D3F01A117AC312000A49318 /* Build configuration list for PBXNativeTarget "RequirementsKitTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +418,7 @@
 				4D3F01A317AC312000A49318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
