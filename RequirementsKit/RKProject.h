@@ -10,4 +10,12 @@
 
 @interface RKProject : NSObject
 
+@property (nonatomic, weak) NSString *title;
+@property (nonatomic, weak) NSString *description;
+@property (nonatomic, weak) NSString *clientID;
+@property (nonatomic, weak) NSDate *createdAt;
+@property (nonatomic, weak) NSDate *updatedAt;
+
++ (NSString *)indexEndpoint;
+
 @end

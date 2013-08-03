@@ -8,6 +8,7 @@
 
 #import "RequirementsKitTests.h"
 #import "RequirementsKit.h"
+#import "RKProject.h"
 
 @implementation RequirementsKitTests
 
@@ -51,6 +52,16 @@
     RequirementsKit *kit = [RequirementsKit sharedInstance];
     [kit setApiKey:@"test123"];
     STAssertEqualObjects([kit tokenParam], @"?token=test123", @"should output the token param to append to the end of the endpoint");
+}
+
+- (void)testAllProjects
+{
+    RequirementsKit *kit = [RequirementsKit sharedInstance];
+    [kit setApiKey:@"0d7e98bc160b21304a3bfffc7f054108"];
+    STAssertTrue([[(RKProject *)[[kit projects] objectAtIndex:0] title] isEqualToString:@"Project1"], @"should be the correct project in the test account");
+    STAssertTrue([[(RKProject *)[[kit projects] objectAtIndex:0] description] isEqualToString:@"A nice testing project"], @"should be the correct project in the test account");
+
+    STAssertTrue([[kit projects] count] == 1, @"should be one project in the test account");
 }
 
 @end

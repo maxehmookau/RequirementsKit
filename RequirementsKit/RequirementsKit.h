@@ -7,13 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+@class RequirementsKit;
+
+@protocol RequirementsKitProjectDelegate <NSObject>
+
+- (void)didReceiveAllProjects;
+- (void)failedToReceiveAllProjects;
+
+@end
 
 @interface RequirementsKit : NSObject
 
 + (RequirementsKit *)sharedInstance;
 + (NSURL *)baseURI;
 - (NSString *)tokenParam;
+- (NSArray *)projects;
 
 @property (nonatomic) NSString *apiKey;
+@property (nonatomic) id delegate;
 
 @end

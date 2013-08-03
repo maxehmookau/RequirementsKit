@@ -10,4 +10,9 @@
 
 @implementation RKProject
 
++ (NSString *)indexEndpoint
+{
+    return @"projects";
+}
+
 @end
