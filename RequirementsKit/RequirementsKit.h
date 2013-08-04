@@ -18,10 +18,16 @@
 
 @interface RequirementsKit : NSObject
 
+// Singleton Method
 + (RequirementsKit *)sharedInstance;
+
+// URL Generation
 + (NSURL *)baseURI;
 - (NSString *)tokenParam;
+
+// Projects
 - (NSArray *)projects;
+- (NSArray *)projectWithID:(int)projectID;
 
 @property (nonatomic) NSString *apiKey;
 @property (nonatomic) id delegate;

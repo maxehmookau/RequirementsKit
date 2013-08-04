@@ -28,6 +28,10 @@ static RequirementsKit *sharedInstance;
 
 # pragma mark - Projects
 
+/*
+ * GET - /projects
+ * Returns an NSArray of RKProjects
+ */
 - (NSArray *)projects
 {
     NSString *urlString = [NSString stringWithFormat:@"%@%@%@",
@@ -59,7 +63,9 @@ static RequirementsKit *sharedInstance;
     return [NSArray arrayWithArray:projects];
 }
 
-#pragma mark - Singleton Method
+
+
+#pragma mark - Singleton Method Setup
 
 + (RequirementsKit *)sharedInstance
 {
