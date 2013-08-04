@@ -10,7 +10,7 @@ Objective-C Bindings for Gatherrequirements.com
 
 2. Initialize the shared instance in `AppDelegate.m`:
 
-```objectivec
+```objective-c
 #import "RequirementsKit.h"
 ...
 RequirementsKit *kit = [RequirementsKit sharedInstance];
