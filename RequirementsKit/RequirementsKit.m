@@ -8,7 +8,6 @@
 
 #import "RequirementsKit.h"
 #import "RKProject.h"
-#import "AFJSONRequestOperation.h"
 
 @implementation RequirementsKit
 
@@ -63,6 +62,44 @@ static RequirementsKit *sharedInstance;
     return [NSArray arrayWithArray:projects];
 }
 
+/*
+ * GET - /projects/{id}
+ * Returns a single RKProject
+ */
+- (RKProject *)projectWithID:(int)projectID
+{
+    NSString *urlString = [NSString stringWithFormat:@"%@%@%@",
+                           [RequirementsKit baseURI],
+                           [RKProject showEndpointForID:projectID],
+                           [self tokenParam]];
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *req = [NSURLRequest requestWithURL:url
+                                         cachePolicy:NSURLCacheStorageAllowed
+                                     timeoutInterval:10];
+    
+    NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] init];
+    
+    NSData *data = [NSURLConnection sendSynchronousRequest:req
+                                         returningResponse:&response
+                                                     error:nil];
+    
+    if ([response statusCode] == 404) {
+        return nil;
+    }
+    
+    
+    
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                         options:NSJSONReadingAllowFragments
+                                                           error:nil];
+    
+    RKProject *project = [RKProject new];
+    [project setTitle:[json valueForKey:@"title"]];
+    [project setDescription:[json valueForKey:@"description"]];
+
+    return project;
+}
 
 
 #pragma mark - Singleton Method Setup

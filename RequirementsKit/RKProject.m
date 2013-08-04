@@ -15,4 +15,9 @@
     return @"projects";
 }
 
++ (NSString *)showEndpointForID:(int)projectID
+{
+    return [[RKProject indexEndpoint] stringByAppendingFormat:@"/%i", projectID];
+}
+
 @end

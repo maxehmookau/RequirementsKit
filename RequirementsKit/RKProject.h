@@ -17,5 +17,6 @@
 @property (nonatomic, weak) NSDate *updatedAt;
 
 + (NSString *)indexEndpoint;
++ (NSString *)showEndpointForID:(int)projectID;
 
 @end

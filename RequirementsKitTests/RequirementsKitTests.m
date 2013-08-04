@@ -64,4 +64,17 @@
     STAssertTrue([[kit projects] count] == 1, @"should be one project in the test account");
 }
 
+- (void)testAFailedProject
+{
+    RequirementsKit *kit = [RequirementsKit sharedInstance];
+    [kit setApiKey:@"0d7e98bc160b21304a3bfffc7f054108"];
+    STAssertNil([kit projectWithID:2], @"2 should return nil");
+}
+
+- (void)testARealProject
+{
+    RequirementsKit *kit = [RequirementsKit sharedInstance];
+    [kit setApiKey:@"0d7e98bc160b21304a3bfffc7f054108"];
+    STAssertTrue([[(RKProject *)[kit projectWithID:3] title] isEqualToString:@"Project1"], @"should be the correct project");
+}
 @end

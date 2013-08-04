@@ -17,6 +17,7 @@
 		4D3F019817AC312000A49318 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D3F019617AC312000A49318 /* InfoPlist.strings */; };
 		4D3F019B17AC312000A49318 /* RequirementsKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F019A17AC312000A49318 /* RequirementsKitTests.m */; };
 		4D3F01A617AD4D9300A49318 /* RKProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F01A517AD4D9300A49318 /* RKProject.m */; };
+		4DF0139417AEB11A000A83E5 /* RKProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF0139317AEB11A000A83E5 /* RKProjectTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		4D3F019A17AC312000A49318 /* RequirementsKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequirementsKitTests.m; sourceTree = "<group>"; };
 		4D3F01A417AD4D9300A49318 /* RKProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKProject.h; sourceTree = "<group>"; };
 		4D3F01A517AD4D9300A49318 /* RKProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKProject.m; sourceTree = "<group>"; };
+		4DF0139217AEB11A000A83E5 /* RKProjectTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKProjectTests.h; sourceTree = "<group>"; };
+		4DF0139317AEB11A000A83E5 /* RKProjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKProjectTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 			children = (
 				4D3F019917AC312000A49318 /* RequirementsKitTests.h */,
 				4D3F019A17AC312000A49318 /* RequirementsKitTests.m */,
+				4DF0139217AEB11A000A83E5 /* RKProjectTests.h */,
+				4DF0139317AEB11A000A83E5 /* RKProjectTests.m */,
 				4D3F019417AC312000A49318 /* Supporting Files */,
 			);
 			path = RequirementsKitTests;
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3F019B17AC312000A49318 /* RequirementsKitTests.m in Sources */,
+				4DF0139417AEB11A000A83E5 /* RKProjectTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/RequirementsKit.dst;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RequirementsKit/RequirementsKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -352,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/RequirementsKit.dst;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RequirementsKit/RequirementsKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";

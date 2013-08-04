@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RKProject.h"
 @class RequirementsKit;
 
 @protocol RequirementsKitProjectDelegate <NSObject>
@@ -27,7 +28,7 @@
 
 // Projects
 - (NSArray *)projects;
-- (NSArray *)projectWithID:(int)projectID;
+- (RKProject *)projectWithID:(int)projectID;
 
 @property (nonatomic) NSString *apiKey;
 @property (nonatomic) id delegate;
